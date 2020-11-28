@@ -1,4 +1,4 @@
-function Fastdgauss(img::Array{Number}, σ::Number=1.0, dir::String="x", K::Int64=2)
+function Fastdgauss(img, σ::Number=1.0, dir::String="x", K::Int64=2)
     if length(size(img)) > 3 || length(size(img)) < 1
         println("Choose a 1D signal or 2D/3D image")
     elseif (length(size(img)) == 1) && (dir != "x")
