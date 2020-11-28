@@ -235,7 +235,6 @@ function O1gauss1d!(f::AbstractArray,σ::Number,K::Integer,R::Integer,table::Tup
     @inbounds for x in (n-R-1):n
         f[x] = container[(x % (R+2) == 0 ? R+2 : x % (R+2))]
     end
-    return f
 end
 
 # function to find the kernel radius that minimize the spacial error
